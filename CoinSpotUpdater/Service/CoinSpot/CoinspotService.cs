@@ -45,7 +45,7 @@ namespace CoinSpotUpdater.CoinSpot
             => GetMyBalances().GetTotal();
 
         public CoinSpotBalances GetMyBalances()
-            => JsonConvert.DeserializeObject<CoinSpotBalances>(GetMyBalancesJson());
+            => JsonConvert.DeserializeObject<CoinSpotBalances>(GetMyBalancesJson));
 
         public string GetMyBalancesJson(string JSONParameters = "{}")
             => PrivateApiCallJson(_baseReadOnlyUrl + "balances", JSONParameters);
